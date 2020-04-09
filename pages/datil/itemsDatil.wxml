@@ -1,0 +1,21 @@
+<!--pages/datil/itemsDatil.wxml-->
+<view>
+  <swiper indicator-dots="true">
+    <swiper-item>
+      <image src="/images/carousel/sea.jpg"></image>
+    </swiper-item>
+     <swiper-item>
+      <image src="/images/carousel/qq.png"></image>
+    </swiper-item>
+     <swiper-item>
+      <image src="/images/carousel/yiyun.png"></image>
+    </swiper-item>
+  </swiper>
+
+  <view>
+    <text>￥6000-7000</text>
+    <text>联想拯救者游戏笔记本</text>
+    <textarea>商品描述：这是一个牛逼的笔记本，快入手把！</textarea>
+    <text>使用时间：一个月</text>
+  </view>
+</view>

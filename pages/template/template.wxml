@@ -1,0 +1,26 @@
+<!--pages/template/template.wxml-->
+<template name="ItemsTem">
+
+	<view class="template">
+		<view class="body">
+			<view class="itemInfo">
+				<text class="title">{{title}}</text>
+				<text class="price">￥{{price}}</text>
+			</view>
+			<view class="itemImg">
+				<image class="img" src="{{itemImg}}" ></image>
+			</view>
+			<view class="itemDate">
+				<text  class="date">{{headText}}</text>
+			</view>
+
+
+			<view class="tail">
+				<image class="tailImg1" src="/images/icon/shoucang.png" mode="aspectFit"></image>
+				<text class="tailText1">{{tailText1}}</text>
+				<image class="tailImg2" src="/images/icon/eye.png"></image>
+				<text class="tailText2">{{tailText2}}</text>
+			</view>
+		</view>
+	</view>
+</template>

@@ -1,0 +1,37 @@
+<!--pages/fabu/itemsFabu.wxml-->
+<view class="container">
+	<view class="itemTitle">
+		<text>宝贝标题</text>
+		<input type="text" placeholder="请输入宝贝的标题"></input>
+	</view>
+	<view class="itemIntroduce">
+		<text>宝贝描述</text>
+		<textarea></textarea>
+	</view>
+	<view class="itemPic">
+    <text>宝贝图片</text>
+    <button>点击上传</button>
+	</view>
+  <view class="buyDate">
+    <text class="text">购买日期</text>
+    <picker mode="date" value="0" 
+    fields="day" bindchange="changeDate">
+    <button>选择日期</button>
+    <text class="date">{{date}}</text>
+    </picker>
+  </view>
+  <view class="school">
+    <text>所在校区</text>
+     <radio-group>
+      <radio>北区</radio>
+      <radio>南区</radio>
+      <radio>西区</radio>  
+    </radio-group>
+  </view>
+  <view class="price">
+    <text>交易价格</text>
+    <input type="number"></input><view>元</view>
+    
+  </view>
+  <button class="submit">提交</button>
+</view>

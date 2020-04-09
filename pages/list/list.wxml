@@ -1,0 +1,29 @@
+<!--pages/list.wxml-->
+<import src="/pages/template/template.wxml" />
+
+<view class="carousel">
+	<view class='search'>
+		<input type='text' placeholder='输入你想要的商品' confirm-type='search' value="{{inputValue}}" bindinput='inputBind' bindconfirm='query'></input>
+		<image class="" src="/images/icon/sousuo.png" bindtap='query' mode="widthFix"></image>
+	</view>
+	<swiper indicator-dots="true" autoplay circular>
+		<swiper-item>
+			<image class="carousel1" src="/images/carousel/carousel1.jpg"></image>
+		</swiper-item>
+		<swiper-item>
+			<image class="carousel2" src="/images/carousel/carousel2.jpg"></image>
+		</swiper-item>
+	</swiper>
+</view>
+<view>
+
+
+
+	<view class="container">
+		<block wx:for="{{listArr}}" wx:key="{{index}}">
+			<view>
+				<template is="ItemsTem" data="{{...item}}" />
+			</view>
+		</block>
+	</view>
+</view>
