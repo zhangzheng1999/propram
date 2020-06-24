@@ -1,0 +1,11 @@
+/* pages/success/success.wxss */
+.page{
+  background-color: #FFFFFF;
+}
+.btn{
+  background-color: #07C160;
+  color: white;
+  width: 300rpx;
+  height: 80rpx;
+  margin-top: 300rpx;
+}

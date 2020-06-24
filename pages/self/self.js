@@ -1,18 +1,40 @@
 // pages/self/self.js
+let appDates = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    tip:true
   },
+  //监听用户等级图标点击
+  handleMedal(){
+    wx.showToast({
+      title: '有点Low的铜牌交易人',
+      icon:'none',
+      duration:2000
+    })
+  },
+  //消息提醒
 
+
+  /**
+   * 跳转到商品管理
+   */
+  itemManage(){
+    wx.navigateTo({
+      url:'/pages/itemManage/itemManage',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function(options) {
+    var isTip = wx.getStorageSync('isCollected');
+    this.setData({   
+        tip:isTip 
+    })
   },
 
   /**

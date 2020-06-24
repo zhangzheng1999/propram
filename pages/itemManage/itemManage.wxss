@@ -1,0 +1,2 @@
+/* pages/itemManage/itemManage.wxss */
+@import "/pages/template/itemManage.wxss"

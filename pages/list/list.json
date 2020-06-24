@@ -1,7 +1,13 @@
 {
+  
+  "usingComponents": {
+   
+  },
   "navigationBarTitleText": "校园二手交易平台",
   "navigationBarTextStyle": "white",
-  "enablePullDownRefresh":true
+  "enablePullDownRefresh":true,
+  "onReachBottomDistance":200
+ 
   
   
 }

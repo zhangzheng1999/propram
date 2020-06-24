@@ -1,0 +1,7 @@
+<!--pages/collect/collect.wxml-->
+<import src="/pages/template/collect.wxml"/>
+<scroll-view>
+	<block wx:for="{{items}}" wx:key="*this">
+		<template is="collect" data="{{...item}}"/>
+	</block>
+</scroll-view>

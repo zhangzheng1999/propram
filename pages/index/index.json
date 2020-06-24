@@ -1,5 +1,6 @@
 {
   
   "navigationBarBackgroundColor": "#489B81",
-  "navigationBarTextStyle": "black"
+  "navigationBarTextStyle": "black",
+  "navigationBarTitleText": "Welcome"
 }

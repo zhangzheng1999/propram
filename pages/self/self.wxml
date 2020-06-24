@@ -1,39 +1,55 @@
 <!--pages/self/self.wxml-->
 <view class="container">
-<!-- 第一部分 -->
-  <view class="box">
-    <image class="headImg" src="/images/head/head.png" mode="widthFix"></image>
-    <text class="username">用户1</text>
-    <image class="medal" src="/images/icon/tongpai.png"></image>
-    <image class="right" src="/images/icon/right.png"></image>
-  </view>
-<!-- 第二部分 -->
-  <view class="function">
-    <text>动态</text>
-    <text>关注</text>
-    <text>粉丝</text>
-  </view>
-  <!-- 第三部分 -->
-  <view class="tool">
-    <view class="collect">
-      <text>我的收藏</text>
-      <image src="/images/icon/right.png"></image>
-    </view>
-    <view class="item">
-      <text>商品管理</text>
-      <image src="/images/icon/right.png"></image>
-    </view>
-    <view class="record">
-      <text>浏览记录</text>
-      <image src="/images/icon/right.png"></image>
-    </view>
-    <view class="advice">
-      <text>用户反馈</text>
-      <image src="/images/icon/right.png"></image>
-    </view>
-    <view class="set">
-      <text>系统设置</text>
-      <image src="/images/icon/right.png"></image>
-    </view>
-  </view>
+	<!-- 第一部分 -->
+	<view class="box">
+		
+		<view class="userinfo-avatar">
+			<open-data style=" width: 200rpx; height: 200rpx;" type="userAvatarUrl" mode="widthFix"></open-data>
+		</view>
+		<open-data class="username" type="userNickName" lang="zh_CN"></open-data>
+		<image bindtap="handleMedal" class="medal" src="/images/icon/tongpai.png"></image>
+	</view>
+	<!-- 第二部分 -->
+	<view class="function">
+		<!-- <view>
+				<text>动态</text>
+				<image hidden="{{tip}}"/>
+		</view>
+		<view>
+				<text>关注</text>
+				<image hidden/>
+		</view>
+		<view>
+				<text>粉丝</text>
+				<image hidden/>
+		</view> -->
+	</view>
+	<!-- 第三部分 -->
+	<view class="tool">
+		<!-- 我的收藏 -->
+		<!-- <view class="collect" bindtap="collect">
+			<text>我的收藏</text>
+			<image src="/images/icon/right.png"></image>
+		</view> -->
+		<!-- 商品管理 -->
+		<view class="item" bindtap="itemManage">
+			<text>商品管理</text>
+			<image src="/images/icon/right.png"></image>
+		</view>
+		<!-- 系统设置 -->
+		<view class="set">
+			<text>系统设置</text>
+			<image src="/images/icon/right.png"></image>
+		</view>
+		<!-- 用户反馈 -->
+		<view class="advice">
+			<button open-type="feedback" class="adviceBtn">
+					<text class="adviceT">用户反馈</text>
+					<!-- <image src="/images/icon/right.png"></image> -->
+			</button>			
+		</view>
+
+
+	</view>
+
 </view>

@@ -1,0 +1,12 @@
+<!--pages/itemManage/itemManage.wxml-->
+<import src="/pages/template/itemManage.wxml"/>
+<view>
+  <scroll-view>
+  
+      <block wx:for="{{myItem}}" wx:key="*this">
+      	<navigator url="/pages/itemUpdate/itemUpdate?itemId={{item.itemId}}">
+          <template is="collect" data="{{...item}}"/>
+        </navigator>       
+      </block>   
+  </scroll-view>  
+</view>

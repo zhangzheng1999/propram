@@ -1,13 +1,16 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view class="box">
+  <view class="tip">
+    <text>淄职交易平台</text>
   </view>
-  <view class="usermotto">
-    <text class="user-motto"catchtap="handleClick">{{motto}}</text>
+  <view class="userinfor">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取您的信息 </button>
+   
+    <block wx:else>
+      <image class="avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="nickname">{{userInfo.nickName}}</text>
+    </block>
+     <button bindtap="shouquan">授权</button>
+     <button bindtap="sendMessage">发送消息</button>
   </view>
 </view>

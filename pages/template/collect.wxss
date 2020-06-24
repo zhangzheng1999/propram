@@ -1,0 +1,33 @@
+/* pages/template/collect.wxml.wxss */
+.items{
+  display: flex;
+  flex-direction: row;
+  border-bottom: #eee solid;
+  padding: 20rpx 0;
+}
+.items image{
+  width: 200rpx;
+  height: 150rpx;
+  margin: 20rpx;
+}
+.itemsInf{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+}
+.itemsInf .item_title{
+  width: 50%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 20rpx 10rpx;
+}
+.itemsInf .item_price{
+  color: red;
+  margin: 20rpx 10rpx
+}
+checkbox-group {
+  position: absolute;
+  top: 80rpx;
+  right: 10rpx;
+}

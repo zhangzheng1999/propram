@@ -2,47 +2,23 @@
 .container{
   display: flex;
   flex-direction: column;
-  margin: auto auto;
+  /* margin: auto auto; */
 }
-.container view{
-  margin: 20rpx 40rpx;
-}
-.itemTitle{
-  margin: 20rpx 40rpx;
-}
-text{
-  font-size: 40rpx;
-  float: left;
-  margin: 0 40rpx;
-}
-.itemTitle input{
-  width: 50%;
-  height: 50rpx;
-  border: 3rpx solid #808080;
-  border-radius: 5%;
-}
-.itemIntroduce{
-  margin: 20rpx 40rpx;
+.deleteImg{
+  width: 30rpx;
+  height: 30rpx;
+ 
+  position: absolute;
+  /* left: 180rpx; */
+  /* top:-202rpx; */
+  /* left: 190rpx;
+  top: 110rpx; */
+  left: 190rpx;
+  top: 110rpx;
 }
 
-.itemIntroduce textarea{
-  width: 70%;
-  border: 3rpx solid #808080;
-  border-radius: 5%;
-  float: right;
-}
-.price{
-  display: flex;
-  flex-direction: row;
-}
-.price input{
-  width: 10%;
-  height: 50rpx;
-  border: 3rpx solid #808080;
-  border-radius: 5%;
-}
-.submit{
-  text-align: center;
-  margin: auto;
-  background-color: #A3F5F5;
-}
+
+
+
+
+

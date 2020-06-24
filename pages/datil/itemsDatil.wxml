@@ -1,21 +1,47 @@
 <!--pages/datil/itemsDatil.wxml-->
 <view>
-  <swiper indicator-dots="true">
-    <swiper-item>
-      <image src="/images/carousel/sea.jpg"></image>
-    </swiper-item>
-     <swiper-item>
-      <image src="/images/carousel/qq.png"></image>
-    </swiper-item>
-     <swiper-item>
-      <image src="/images/carousel/yiyun.png"></image>
-    </swiper-item>
-  </swiper>
+	<!-- 轮播图 -->
+	<scroll-view scroll-y>
+		<swiper indicator-dots="true" autoplay="true">
+			<swiper-item>
+				<image src="/images/carousel/carousel1.jpg"></image>
+			</swiper-item>
+			<swiper-item>
+				<image src="/images/carousel/carousel2.jpg"></image>
+			</swiper-item>
+			<swiper-item>
+				<image src="/images/carousel/carousel3.jpg"></image>
+			</swiper-item>
+		</swiper>
 
-  <view>
-    <text>￥6000-7000</text>
-    <text>联想拯救者游戏笔记本</text>
-    <textarea>商品描述：这是一个牛逼的笔记本，快入手把！</textarea>
-    <text>使用时间：一个月</text>
-  </view>
+		<!-- 商品信息 -->
+		<view class="body"  open-type="share">
+			<image catchtap="handleShare" class="shareImg" src="/images/icon/share.png"></image>
+			<view class="container" >
+				<view class="item_info" >
+					<text class="item_title">{{detail.itemName}}</text>
+					<text class="item_price">￥{{detail.itemPrice}}</text>
+				</view>
+				<view class="item_datil" >
+					<text>描述：{{detail.itemDetail}}</text>
+					<text>购买时间：{{detail.itemBuyTime}}</text>
+					<text>所在校区：{{detail.itemSchool}}</text>
+				</view>
+				<view class="image">
+					<image bindtap="openImg" src="{{detail.itemPic}}" mode="widthFix" ></image>
+				</view>
+			</view>
+		</view>
+
+	</scroll-view>
+	<!-- 底部菜单 -->
+	<view class="bottom">
+		<view class="collect" bindtap="addCollect">
+			<image catchtap="handleChange" wx:if="{{isCollected}}" src="/images/icon/shoucang.png"></image>
+			<image catchtap="handleChange" wx:if="{{!isCollected}}" src="/images/icon/shoucangL.png"></image>
+			<text>收藏</text>
+		</view>
+		<button class="connection">联系商家</button>
+	</view>
+
 </view>

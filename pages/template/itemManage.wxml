@@ -1,0 +1,14 @@
+<template name="collect">
+	<view class="items">
+		<image src="http://localhost:8080/itemPic/{{itemPic}}"></image>
+		<view class="itemsInf">
+			<text class="item_title">{{itemName}}</text>
+			<text class="item_price">￥{{itemPrice}}</text>
+		</view>
+		<view  class="update">
+			<text>编辑</text>
+		</view>
+
+		
+	</view>
+</template>

@@ -1,0 +1,19 @@
+<!--pages/success/success.wxml-->
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="weui-msg">
+		<view class="weui-msg__icon-area"><i class="weui-icon-success weui-icon_msg"></i></view>
+		<view class="weui-msg__text-area">
+			<h2 class="weui-msg__title">提交成功</h2>
+			<view class="weui-msg__desc">您可以在个人中心 -> 商品管理，<a><navigator open-type="reLaunch" url="/pages/itemManage/itemManage">查看详情</navigator></a></view>
+			
+		</view>
+		<view class="weui-msg__opr-area">
+			<view class="weui-btn-area">
+				<button class="btn" bindtap="retuenList">返回首页</button>
+			</view>
+		</view>
+		
+		
+	</view>
+</view>
+

@@ -1,37 +1,98 @@
 <!--pages/fabu/itemsFabu.wxml-->
 <view class="container">
-	<view class="itemTitle">
-		<text>宝贝标题</text>
-		<input type="text" placeholder="请输入宝贝的标题"></input>
-	</view>
-	<view class="itemIntroduce">
-		<text>宝贝描述</text>
-		<textarea></textarea>
-	</view>
-	<view class="itemPic">
-    <text>宝贝图片</text>
-    <button>点击上传</button>
-	</view>
-  <view class="buyDate">
-    <text class="text">购买日期</text>
-    <picker mode="date" value="0" 
-    fields="day" bindchange="changeDate">
-    <button>选择日期</button>
-    <text class="date">{{date}}</text>
-    </picker>
-  </view>
-  <view class="school">
-    <text>所在校区</text>
-     <radio-group>
-      <radio>北区</radio>
-      <radio>南区</radio>
-      <radio>西区</radio>  
-    </radio-group>
-  </view>
-  <view class="price">
-    <text>交易价格</text>
-    <input type="number"></input><view>元</view>
-    
-  </view>
-  <button class="submit">提交</button>
+	<form bindsubmit="formSubmit">
+		<!-- 标题 -->
+		<view class="weui-cell weui-cell_active">
+			<view class="weui-cell__hd">
+				<view class="weui-label">标题：</view>
+			</view>
+			<view class="weui-cell__bd">
+				<input class="weui-input" bindinput="titleInput" placeholder="请输入商品标题" type="text" name="itemName" confirm-type="done" />
+			</view>
+		</view>
+
+		<!-- 描述 -->
+
+		<view class="weui-cells weui-cells_form">
+			<view class="weui-cell ">
+				<view class="weui-cell__bd">
+					<textarea class="weui-textarea" placeholder="请描述商品信息" bindinput="detailInput" name="itemDetail" maxlength="200"></textarea>
+					<view class="weui-textarea-counter"><text>{{datailNum}}</text>/200</view>
+				</view>
+			</view>
+		</view>
+
+		<!-- 图片 -->
+		<view class="weui-cell">
+			<view class="weui-cell__bd">
+				<view class="weui-uploader">
+					<view class="weui-uploader__hd">
+						<view class="weui-uploader__overview">
+							<view class="weui-uploader__title">商品图片上传</view>
+							<view class="weui-uploader__info">{{files.length}}/1</view>
+						</view>
+					</view>
+					<view class="weui-uploader__bd">
+						<view class="weui-uploader__files" id="uploaderFiles">
+							<block wx:for="{{files}}" wx:key="*this">
+								<view class="weui-uploader__file" bindtap="previewImage" id="{{item}}">
+									<image class="weui-uploader__img" data-index="{{index}}" name="itemPic" src="{{item}}" mode="aspectFill" />
+									<image class="deleteImg" src="/images/icon/delete.png" data-index="{{index}}" catchtap="deleteImage"/>
+								</view>
+							</block>
+						</view>
+						<view class="weui-uploader__input-box" wx:if="{{showUpload}}">
+							<view class="weui-uploader__input" bindtap="chooseImage"></view>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<!-- 购买日期 -->
+		<view class="weui-cell weui-cell_active">
+			<view class="weui-cell__hd">
+				<view class="weui-label">购买日期：</view>
+			</view>
+			<view class="weui-cell__bd">
+				<picker mode="date" value="{{date}}" name="itemBuytime" start="2000-01-01" bindchange="bindDateChange">
+					<view class="weui-input">{{date}}</view>
+				</picker>
+			</view>
+		</view>
+
+		<!-- 校区 -->
+		<view class="weui-cell weui-cell_active weui-cell_select weui-cell_select-after">
+			<view class="weui-cell__hd">
+				<label class="weui-label" style="width: 3em">校区:</label>
+			</view>
+			<view class="weui-cell__bd">
+				<picker bindchange="bindPicker3Change" range="{{array1}}" name="school">
+					<view class="weui-select">{{array1[value1]}}</view>
+				</picker>
+			</view>
+		</view>
+
+		<!-- 交易价格 -->
+
+		<view class="weui-cell weui-cell_active">
+			<view class="weui-cell__hd">
+				<view class="weui-label">价格：</view>
+			</view>
+			<view class="weui-cell__bd">
+				<input class="weui-input" name="itemPrice" type="number" bindinput="priceInput" placeholder="请输入交易价格" confirm-type="done" />
+			</view>
+		</view>
+		<!-- 提交 -->
+		<label class="weui-agree" >
+		 	<checkbox-group bindchange="agree">
+			<checkbox class="weui-agree__checkbox-check"></checkbox>
+				<span class="weui-agree__checkbox"></span>
+				<span class="weui-agree__text">阅读并同意<navigator url="/pages/provision/provision.wxml" bindtap="toProvision" class="weui-agree__link">《相关条款》</navigator></span>
+			</checkbox-group>
+		</label>
+		<view class="weui-btn-area">
+			<button class="weui-btn" type="primary" disabled="{{!isAgree}}" formType="submit">提交</button>
+		</view>
+	</form>
 </view>

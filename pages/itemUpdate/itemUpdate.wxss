@@ -1,0 +1,2 @@
+/* pages/itemUpdate/itemUpdate.wxss */
+@import '/pages/fabu/itemsFabu.wxss';

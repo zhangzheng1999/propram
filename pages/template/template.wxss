@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  box-sizing: border-box;
+  break-inside: avoid;
   background-color:#8CCAB6;
   margin: 40rpx 20rpx;
   border-radius: 20rpx;
@@ -11,31 +13,22 @@
 .itemInfo{
   display: flex;
   flex-direction: row;
-  margin-left: 20rpx;
+  margin-left: 10rpx;
 } 
+.itemInfo .title{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 160rpx;
+}
 .itemInfo .price{
   color: brown;
-  margin: 0 30rpx;
+  margin: 0 20rpx;
 }
 
 .img{
   width: 100%;
-  height: 200rpx;
 }
 .date{
-  margin-left: 20rpx;
-}
-.tail{
-margin-left: 130rpx;
-}
-.tail .tailImg1,.tailImg2{
-  width: 36rpx;
-  height: 36rpx;
-  vertical-align: middle;
-  margin-right: 10rpx;
- 
-}
-.tail .tailText1,.tailText2{
-  font-size: 28rpx;
-  margin-right:10rpx ;
+  margin-left: 5rpx;
 }

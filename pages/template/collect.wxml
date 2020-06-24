@@ -1,0 +1,11 @@
+<!--pages/template/collect.wxml.wxml-->
+<template name="collect">
+	<view class="items">
+			<image src="{{itemPic}}"></image>
+			<view class="itemsInf">
+				<text class="item_title">{{itemName}}</text>
+				<text class="item_price">￥{{itemPrice}}</text>
+			</view>
+				<checkbox></checkbox>
+	</view>
+</template>

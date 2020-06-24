@@ -1,44 +1,59 @@
 {
-  "pages": [
-    "pages/datil/itemsDatil",
-    "pages/fabu/itemsFabu",
-    "pages/list/list",
-    "pages/self/self",
+  "pages": [ 
     "pages/index/index",
-    "pages/logs/logs"
-    
-    
-    
+    "pages/list/list",
+    "pages/itemManage/itemManage",
+   
+    "pages/itemUpdate/itemUpdate",
+    "pages/chat/chat", 
+    "pages/success/success",
+    "pages/fabu/itemsFabu",
+    "pages/provision/provision",
+     
+    "pages/collect/collect", 
+    "pages/self/self", 
+    "pages/datil/itemsDatil",
+    "pages/part/search/searchBox",
+    "pages/setting/setting"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#489B81",
-    "navigationBarTitleText": "校园二手交易平台",
     "navigationBarTextStyle": "white"
   },
-  "tabBar":{
-    "color":"#000",
-    "selectedColor":"#fff",
-    "backgroundColor":"#C0C0C0",
-    "list":[
+  "tabBar": {
+    "color": "#000",
+    "selectedColor": "#1296db",
+    "backgroundColor": "#DEDEDE",
+    "list": [
       {
-        "pagePath":"pages/list/list",
-        "text":"首页",
-        "iconPath":"images/icon/index.png"
+        "pagePath": "pages/list/list",
+        "text": "首页",
+        "iconPath": "images/icon/index.png",
+        "selectedIconPath": "images/icon/index_active.png"
       },
       {
-        "pagePath":"pages/fabu/itemsFabu",
-        "text":"发布",
-        "iconPath":"images/icon/fabu.png"
+        "pagePath": "pages/collect/collect",
+        "text": "收藏",
+        "iconPath": "images/icon/shoucangL.png",
+        "selectedIconPath": "images/icon/shoucang_active.png"
       },
       {
-        "pagePath":"pages/self/self",
-        "text":"我的",
-        "iconPath":"images/icon/self.png"
+        "pagePath": "pages/fabu/itemsFabu",
+        "text": "发布",
+        "iconPath": "images/icon/fabu.png",
+        "selectedIconPath": "images/icon/fabu_active.png"
+      },
+      {
+        "pagePath": "pages/self/self",
+        "text": "我的",
+        "iconPath": "images/icon/self.png",
+        "selectedIconPath": "images/icon/self_active.png"
       }
     ]
-   
   },
-  "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "uploadFile": 900000
+  }
 }
